@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">training</string>
+    <string name="video_card_img_description">Video Thumbnail</string>
+    <string name="video_details_text">Video Details</string>
+    <string name="no_video_error">No video available </string>
+    <string name="button_text">Save Video</string>
+    <string name="saved_video_text">Saved Videos</string>
+
 </resources>

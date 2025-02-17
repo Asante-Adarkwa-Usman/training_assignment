@@ -2,11 +2,10 @@ package com.example.training.di
 
 import android.content.Context
 import androidx.room.Room
-import androidx.room.RoomDatabase
-import com.example.common_challenge.api.ApiService
-import com.example.common_challenge.api.VideoRepo
-import com.example.common_challenge.api.VideoRepoImpl
-import com.example.training.database.UserDatabase
+import com.example.training.api.ApiService
+import com.example.training.api.VideoRepo
+import com.example.training.api.VideoRepoImpl
+import com.example.training.database.VideoDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -34,9 +33,9 @@ object VideoAppModule {
 
     @Provides
     @Singleton
-    fun providesDatabase(@ApplicationContext context: Context): UserDatabase = Room.databaseBuilder(
+    fun providesDatabase(@ApplicationContext context: Context): VideoDatabase = Room.databaseBuilder(
         context,
-        UserDatabase::class.java, "user-database"
+        VideoDatabase::class.java, "video-database"
     ).build()
 
 }

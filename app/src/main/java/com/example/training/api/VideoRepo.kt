@@ -1,4 +1,4 @@
-package com.example.common_challenge.api
+package com.example.training.api
 
 import kotlinx.coroutines.flow.Flow
 

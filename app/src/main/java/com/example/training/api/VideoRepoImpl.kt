@@ -1,11 +1,11 @@
-package com.example.common_challenge.api
+package com.example.training.api
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class VideoRepoImpl@Inject constructor(private val apiService: ApiService):VideoRepo {
-    override suspend fun getVideoDetails(): Flow<Result<List<VideoDetails>>> = flow{
+class VideoRepoImpl@Inject constructor(private val apiService: ApiService): VideoRepo {
+    override suspend fun getVideoDetails(): Flow<Result<List<VideoDetails>>> = flow {
         emit(Result.Loading())
         val masterList = try {
             apiService.getVideoList()
